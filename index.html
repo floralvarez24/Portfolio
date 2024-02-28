@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/img/flor logo .png" type="image/x-icon">
+    <!-- REMIXICONS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <!-- SWIPER CSS-->
+    <link rel="stylesheet" href="">
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo"> Florencia Alvarez Vuille</a>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Home</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="about.html" class="nav__link">About Me</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="work.html" class="nav__link"> Portfolio</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="contact.html" class="button"> Contact Me</a>
+                </li>
+            </ul>
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+        <div class="nav__actions">
+            <!-- theme button-->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+            <!-- toggle button-->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-apps-2-line"></i>
+            </div>
+        </div>
+      </nav>  
+    </header>
+    <main class="main">
+        <section class="home section">
+            <div class="home__rectangle"></div>
+            <div class="home__container container grid">
+                <div class="home__perfil perfil">
+                    <div class="perfil__content">
+                        <img src="assets/img/perfil.png" alt="image" class="perfil__img">
+                    </div>
+                </div>
+
+                <div class="home__content grid">
+                    <div class="home__data grid">
+                        <h1 class="home__name"> Florencia Alvarez Vuille</h1>
+                        <h2 class="home__profession"> System's Analyst & Front-end Developer</h2>
+                        <div class="home__social">
+                          <a href="https://github.com/floralvarez24" target="_blank"class="home__social-link">
+                            <i class="ri-github-fill"></i>
+                          </a>  
+                          <a href="https://www.linkedin.com/in/florencia-alvarez-vuille" target="_blank"class="home__social-link">
+                            <i class="ri-linkedin-box-fill"></i>
+                          </a> 
+                        </div>
+                    </div>
+                    <a href="assets/pdf/AlvarezFlorencia-CVEnglish.pdf" download="" class="home__button button"> Download CV</a>
+                </div>
+            </div>
+        </section>
+        <section class="services section">
+           <h2 class="section__title">
+            The services <br>
+            I offer
+           </h2> 
+           <div class="services__container container grid">
+            <article class="services__card">
+                <i class="ri-code-s-slash-line"></i>
+                <h2 class="services__title"> Web Developer</h2>
+                <p class="services__description">
+                    Beautiful and elegant designs for your website,<br>
+                    using modern technologies and frameworks.
+                    Interfaces are intuitive and easy to use.
+                </p>
+                <button class="services__button button"> Know More</button>
+                <div class="services__modal">
+                    <div class="services__modal-content">
+                        <i class="ri-close-line services__modal-close"></i> 
+                        <h2 class="services__modal-title"> Web Developer</h2>
+                        <ul class="services__modal-list grid">
+                            <li class="services__modal-item">
+                                Create professional and quality websites at the client´s request.
+                            </li>
+                            <li class="services__modal-item">
+                                I position your website with SEO techniques.
+                            </li>
+                            <li class="services__modal-item">
+                                I solve performance problems.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </article>
+           </div>
+        </section>
+        <section class="work section">
+           <h2 class="section__title">
+            My portfolio <br>
+            Projects
+           </h2>
+           <div class="work__container container grid">
+            <article class="work__card">
+                <a href="https://github.com/floralvarez24/michelalvarezmusica" class="work__link" target="_blank">
+                    <img src="assets/img/work1.png" alt="image" class="work__img">
+                    <i class="ri-arrow-right-circle-line work__icon" ></i>
+                </a>
+                <h2 class="work__title">Presentation Website</h2>
+                <span class="work__subtitle">Responsive website for a musician.</span>
+            </article>
+            <article class="work__card">
+                <a href="https://github.com/floralvarez24/PFAlvarez" class="work__link" target="_blank">
+                    <img src="assets/img/work2.png" alt="image" class="work__img">
+                    <i class="ri-arrow-right-circle-line work__icon"></i>
+                </a>
+                <h2 class="work__title">Ecommerce Js</h2>
+                <span class="work__subtitle">Basic ecommerce, only includes the shopping cart.</span>
+            </article>
+            <article class="work__card">
+                <a href="https://github.com/floralvarez24/PF-AlvarezF" class="work__link" target="_blank">
+                    <img src="assets/img/work3.png" alt="image" class="work__img">
+                    <i class="ri-arrow-right-circle-line work__icon"></i>
+                </a>
+                <h2 class="work__title">Ecommerce React.js</h2>
+                <span class="work__subtitle">Ecommerce using firebase to generate client's orders.</span>
+            </article>
+
+           </div>
+        </section>
+        <section class="contact section">
+            <div class="contact__container container grid">
+                <h2 class="section__title">
+                    Let's work together<br>
+                </h2>
+                <a href="contact.html" class="contact__button button">Contact Me</a>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <a href="index.html" class="footer__logo">Florencia Alvarez</a>
+                <ul class="footer__links">
+                    <li>
+                        <a href="about.html" class="footer__link"> About me</a>
+                    </li>
+                    <li>
+                        <a href="work.html" class="footer__link"> Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="footer__link"> Contact Me</a>
+                    </li>
+                </ul>
+                <div class="footer__social">
+                    <a href="linkedin.com/in/florencia-alvarez-vuille" target="_blank" class="footer__social-link">
+                        <i class="ri-linkedin-box-fill"></i>
+                    </a>
+                    <a href="https://github.com/floralvarez24" target="_blank" class="footer__social-link">
+                        <i class="ri-github-fill"></i>
+                    </a>
+                </div>
+            </div>
+            <span class="footer__copy">
+                &#169;All Rights Reserved
+            </span>
+        </div>
+    </footer>
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+    <script src="assets/js/main.js"></script>
+    <script></script>
+    <script src="assets/js/index.js"></script>
+
+</body>
+</html>
