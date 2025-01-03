@@ -20,10 +20,10 @@
       -> Click on tab (Color Conversion)
       -> Copy the color mode (HSL)
   */
-  --hue: 340;
-  --first-color: hsl(var(--hue), 82%, 79%);
-  --first-color-alt: hsl(var(--hue), 82%, 56%);
-  --first-color-light: hsl(var(--hue), 40%, 80%);
+  --hue: 207;
+  --first-color: hsl(var(--hue), 90%, 24%);
+  --first-color-alt: hsl(var(--hue), 82%, 24%);
+  --first-color-light: hsl(var(--hue), 90%, 24%);
   --title-color: hsl(var(--hue), 24%, 16%);
   --text-color: hsl(var(--hue), 8%, 45%);
   --text-color-light: hsl(var(--hue), 8%, 60%);
@@ -200,7 +200,7 @@ body.dark-theme{
     justify-content: center;
     align-items: flex-end;
     background: linear-gradient(180deg,
-                hsl(var(--hue), 82%, 79%),
+                hsl(var(--hue), 90%, 24%),
                 hsl(var(--hue), 82%, 56%));
 }
 
