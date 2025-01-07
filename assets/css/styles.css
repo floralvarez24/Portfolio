@@ -432,20 +432,53 @@ body.dark-theme{
     margin-bottom: 2rem;
 }
 
-.about__skills-img{
-    width: 60px;
-    transition: transform .4s;
+/* Parent container for all skill items */
+.about__skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+    align-items: start;
+    gap: 2rem; /* Space between items */
 }
+
+/* Individual skill items */
+.about__skills-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Skill images */
+.about__skills-img {
+    width: 60px; /* Uniform width */
+    height: 60px; /* Uniform height for consistency */
+    object-fit: contain; /* Ensures image fits within the container */
+    margin-bottom: 0.5rem; /* Space between image and text */
+}
+
+/* Skill names */
+.about__skills-name {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+    text-transform: uppercase; /* Optional: Make all names uppercase */
+}
+
 
 .about__skills-img:hover{
     transform: translateY(-.5rem);
 }
-.about__skills-content{
-    grid-template-columns:repeat(5,max-content);
-    justify-content: center;
-    align-items: center;
-    gap:  2rem 1.5rem;
+
+.about__skills-img2{
+    width: 90px;
+    transition: transform .4s;
 }
+
+.about__skills-img2:hover{
+    transform: translateY(-.5rem);
+}
+
 /*=============== SERVICES ===============*/
 .services__container{
     row-gap: 2rem;   
@@ -957,4 +990,28 @@ color: var(--first-color);
         width: 40vw;
     }
    
+}
+
+.language-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.flag {
+    width: 30px; /* Set the width of the flag */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.flag:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+#portfolio-title {
+    white-space: pre-wrap; /* Respeta los saltos de línea */
 }

@@ -20,23 +20,23 @@
     <nav class="nav container">
       <a href="index.html" class="nav__logo"> Florencia Alvarez Vuille</a>
       <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-              <li class="nav__item">
-                  <a href="index.html" class="nav__link">Home</a>
-              </li>
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="index.html" class="nav__link" data-translate="home">Home</a>
+            </li>
 
-              <li class="nav__item">
-                  <a href="about.html" class="nav__link">About Me</a>
-              </li>
+            <li class="nav__item">
+                <a href="about.html" class="nav__link" data-translate="about">About Me</a>
+            </li>
 
-              <li class="nav__item">
-                  <a href="work.html" class="nav__link"> Portfolio</a>
-              </li>
+            <li class="nav__item">
+                <a href="work.html" class="nav__link"  data-translate="portfolio"> Portfolio</a>
+            </li>
 
-              <li class="nav__item">
-                  <a href="contact.html" class="button"> Contact Me</a>
-              </li>
-          </ul>
+            <li class="nav__item">
+                <a href="contact.html" class="button" data-translate="contact"> Contact Me</a>
+            </li>
+        </ul>
           <div class="nav__close" id="nav-close">
               <i class="ri-close-line"></i>
           </div>
@@ -48,7 +48,12 @@
           <div class="nav__toggle" id="nav-toggle">
               <i class="ri-apps-2-line"></i>
           </div>
-
+          <div class="language-toggle">
+            <img id="btn-es" src="assets/img/spain.svg" alt="Español" class="flag">
+        </div> 
+        <div class="language-toggle">
+            <img id="btn-en" src="assets/img/united.svg" alt="English" class="flag">  
+        </div>
 
       </div>
     </nav>  
@@ -68,29 +73,30 @@
                 <div class="about__data grid">
                     <div class="about__info grid">
                         <h1 class="about__name"> Florencia Alvarez Vuille</h1>
-                        <h2 class="about_profession"> System's Analyst & Front-end Developer</h2>
-                            <p class="about__description">
-                                Passionate about creating <b>Web pages</b> with modern technologies.
-                                I am currently studying my last year of Software Engineer career.
-                                I aspire to work in an company where I can learn new tools and improve my actual knowledge.
+                        <h2 class="about_profession" data-translate="software"> System's Analyst & Front-end Developer</h2>
+                            <p class="about__description" data-translate="aboutDescription">
+                                I am a <b>Software Engineer</b> with experience in developing web, mobile, and integrated systems applications. I specialize in technologies such as [React, Node.js, PostgreSQL, etc.], focusing on creating scalable, efficient, and user-centric products.
+                                My passion for solving complex problems and my commitment to continuous learning have enabled me to collaborate on diverse projects, ranging from e-commerce platforms to data analysis tools. I thrive in dynamic environments where I can combine creativity and technical expertise to deliver impactful solutions.
                             </p>
                     </div>
-                    <a href="contact.html" class="about__button button"> Contact Me</a>                    
+                    <a href="contact.html" class="about__button button" data-translate="contact"> Contact Me</a>                    
                 </div>
                 <div class="about__skills">
-                    <h3 class="about__skills-title"> My Skills Are</h3>
+                    <h3 class="about__skills-title" data-translate="habilidades"> My Skills Are</h3>
                     <div class="about__skills-content grid">
-                        <img src="assets/img/about-css.svg" alt="image" class="about__skills-img">
-                        <img src="assets/img/about-git.svg" alt="image" class="about__skills-img">
-                        <img src="assets/img/about-github.svg" alt="image" class="about__skills-img">
-                        <img src="assets/img/about-html.svg" alt="image" class="about__skills-img">
-                        <img src="assets/img/about-javascript.svg" alt="image" class="about__skills-img">
-                        <img src="assets/img/about-react.svg" alt="image" class="about__skills-img">
-                        <img src="assets/img/about-sass.svg" alt="image" class="about__skills-img">
-                        <img src="assets/img/mysql-logo-svgrepo-com.svg" alt="image" class="about__skills-img">
-                        <img src="assets/img/bootstrap-5-1.svg" alt="image" class="about__skills-img">
-                        <img src="assets/img/vitejs.svg" alt="image" class="about__skills-img">
-                        <img src="assets/img/firebase-1.svg" alt="image" class="about__skills-img">
+                        <img src="assets/img/about-css.svg" alt="CSS" class="about__skills-img">
+                        <img src="assets/img/about-git.svg" alt="Git" class="about__skills-img">
+                        <img src="assets/img/about-github.svg" alt="GitHub" class="about__skills-img">
+                        <img src="assets/img/about-html.svg" alt="HTML" class="about__skills-img">
+                        <img src="assets/img/about-javascript.svg" alt="JavaScript" class="about__skills-img">
+                        <img src="assets/img/about-react.svg" alt="ReactJs" class="about__skills-img">
+                        <img src="assets/img/about-sass.svg" alt="SASS" class="about__skills-img">
+                        <img src="assets/img/mysql-logo-svgrepo-com.svg" alt="MySQL" class="about__skills-img">
+                        <img src="assets/img/bootstrap-5-1.svg" alt="Bootstrap" class="about__skills-img">
+                        <img src="assets/img/vitejs.svg" alt="ViteJs" class="about__skills-img">
+                        <img src="assets/img/firebase-1.svg" alt="Firebase" class="about__skills-img">
+                        <img src="assets/img/nodejs-icon-17.jpg" alt="NodeJs" class="about__skills-img2">
+
                     </div>
                 </div>
             </div>
@@ -98,19 +104,20 @@
     </section>
 
   </main>
+  
   <footer class="footer">
     <div class="footer__container container grid">
         <div class="footer__content grid">
             <a href="index.html" class="footer__logo">Florencia Alvarez</a>
             <ul class="footer__links">
                 <li>
-                    <a href="about.html" class="footer__link"> About me</a>
+                    <a href="about.html" class="footer__link" data-translate="about"> About me</a>
                 </li>
                 <li>
-                    <a href="work.html" class="footer__link"> Portfolio</a>
+                    <a href="work.html" class="footer__link" data-translate="portfolio"> Portfolio</a>
                 </li>
                 <li>
-                    <a href="contact.html" class="footer__link"> Contact Me</a>
+                    <a href="contact.html" class="footer__link" data-translate="contact"> Contact Me</a>
                 </li>
             </ul>
             <div class="footer__social">
@@ -122,7 +129,7 @@
                 </a>
             </div>
         </div>
-        <span class="footer__copy">
+        <span class="footer__copy" data-translate="allRights">
             &#169;All Rights Reserved
         </span>
     </div>

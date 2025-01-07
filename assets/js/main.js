@@ -56,3 +56,96 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+// Language Toggle Functionality
+document.getElementById("btn-es").addEventListener("click", () => setLanguage("es"));
+document.getElementById("btn-en").addEventListener("click", () => setLanguage("en"));
+
+
+const translations = {
+  en: {
+    home: "Home",
+    about: "About Me",
+    portfolio: "Portfolio",
+    contact: "Contact Me",
+    services: "The services I offer",
+    software: "Software Engineer | Innovation in technology",
+    download: "Download CV",
+    cv: "assets/pdf/CV Alvarez Florencia-En.pdf",
+    servicesDescription:"Attractive and elegant designs for your website,using modern technologies and frameworks.Interfaces are intuitive and easy to use.",
+    know: "Know more",
+    service1: "I create professional, high-quality websites tailored to meet clients' needs. I enhance your online presence with effective SEO strategies and resolve performance issues to ensure optimal functionality and user experience",
+    portfolioLine1: "My portfolio",
+    portfolioLine2: "Projects",
+    presentationWebsite: "Presentation Website",
+    descriptionWebsite1: "Responsive website for a musician",
+    descriptionWebsite2: "Basic ecommerce, only includes the shopping cart",
+    descriptionWebsite3:"Ecommerce using firebase to generate client's orders",
+    workTogether: "Let's work together",
+    allRights: "© All rights reserved",
+    aboutDescription: "I am a Software Engineer with experience in developing web, mobile, and integrated systems applications. I specialize in technologies such as [React, Node.js, PostgreSQL, etc.], focusing on creating scalable, efficient, and user-centric products.My passion for solving complex problems and my commitment to continuous learning have enabled me to collaborate on diverse projects, ranging from e-commerce platforms to data analysis tools. I thrive in dynamic environments where I can combine creativity and technical expertise to deliver impactful solutions.",
+    habilidades: "My skills are",
+    name: "Name",
+    email: "Email",
+    namePlaceholder: "Type your name",
+    emailPlaceholder: "Type your email",
+    message: "Message",
+    messagePlaceholder: "Write your message",
+    send: "Send Message",
+
+  },
+  es: {
+    home: "Inicio",
+    about: "Sobre mí",
+    portfolio: "Portafolio",
+    contact: "Contáctame",
+    services: "Mis servicios",
+    software: "Ingeniera en Sistemas de Información | Innovación en tecnología",
+    download: "Descargar CV",
+    cv: "assets/pdf/CV Alvarez Florencia-Es.pdf",
+    servicesDescription: "Diseños atractivos y elegantes para tu sitio web,utilizando tecnologías y frameworks modernos.Interfaces intuitivas y fáciles de usar.",
+    know: "Conoce más",
+    service1: "Creo sitios web profesionales y de alta calidad adaptados a las necesidades de los clientes. Mejoro tu presencia en línea con estrategias de SEO efectivas y resuelvo problemas de rendimiento para garantizar una funcionalidad y experiencia de usuario óptimas.",
+    portfolioLine1: "Mi portafolio",
+    portfolioLine2: "Proyectos",
+    presentationWebsite: "Sitio Web de Presentación",
+    descriptionWebsite1: "Sitio web responsive para un músico",
+    descriptionWebsite2: "Ecommerce básico, solo incluye el carrito de compras",
+    descriptionWebsite3:"Ecommerce usando firebase para generar las órdenes de los clientes",
+    workTogether: "Trabajemos juntos",
+    allRights: "© Todos los derechos reservados",
+    aboutDescription: "Soy Ingeniera en Sistemas de Información con experiencia en el desarrollo de aplicaciones web, móviles y de sistemas integrados. Me especializo en tecnologías como [React, Node.js, PostgreSQL, etc.], centrándome en la creación de productos escalables, eficientes y centrados en el usuario. Mi pasión por resolver problemas complejos y mi compromiso con el aprendizaje continuo me han permitido colaborar en diversos proyectos, que van desde plataformas de comercio electrónico hasta herramientas de análisis de datos. Prospero en entornos dinámicos donde puedo combinar la creatividad y la experiencia técnica para ofrecer soluciones impactantes.",
+    habilidades: "Mis habilidades son",
+    name: "Nombre",
+    namePlaceholder: "Escribe tu nombre",
+    emailPlaceholder: "Escribe tu correo",
+    message: "Mensaje",
+    messagePlaceholder: "Escribe tu mensaje",
+    send: "Enviar Mensaje",
+
+  },
+};
+
+function setLanguage(language) {
+  localStorage.setItem("language", language); // Save preference
+  updateTexts(language);
+  updateCVDownloadLink(language);
+}
+
+function updateCVDownloadLink(language) {
+    const cvButton = document.querySelector("#download-cv");
+    cvButton.setAttribute("href", translations[language].cv);
+  }
+function updateTexts(language) {
+  document.querySelectorAll("[data-translate]").forEach((element) => {
+    const key = element.getAttribute("data-translate");
+    element.textContent = translations[language][key];
+  });
+  document.querySelectorAll("[data-placeholder]").forEach((element) => {
+    const key = element.getAttribute("data-placeholder");
+    element.setAttribute("placeholder", translations[language][key]);
+  });
+}
+
+// Load saved language on page load
+const savedLanguage = localStorage.getItem("language") || "en";
+setLanguage(savedLanguage);

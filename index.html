@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="">
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/styles.css">
+ 
 
 </head>
 <body>
@@ -22,19 +23,19 @@
         <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a href="index.html" class="nav__link">Home</a>
+                    <a href="index.html" class="nav__link" data-translate="home">Home</a>
                 </li>
 
                 <li class="nav__item">
-                    <a href="about.html" class="nav__link">About Me</a>
+                    <a href="about.html" class="nav__link" data-translate="about">About Me</a>
                 </li>
 
                 <li class="nav__item">
-                    <a href="work.html" class="nav__link"> Portfolio</a>
+                    <a href="work.html" class="nav__link"  data-translate="portfolio"> Portfolio</a>
                 </li>
 
                 <li class="nav__item">
-                    <a href="contact.html" class="button"> Contact Me</a>
+                    <a href="contact.html" class="button" data-translate="contact"> Contact Me</a>
                 </li>
             </ul>
             <div class="nav__close" id="nav-close">
@@ -47,6 +48,12 @@
             <!-- toggle button-->
             <div class="nav__toggle" id="nav-toggle">
                 <i class="ri-apps-2-line"></i>
+            </div>
+            <div class="language-toggle">
+                <img id="btn-es" src="assets/img/spain.svg" alt="Español" class="flag">
+            </div> 
+            <div class="language-toggle">
+                <img id="btn-en" src="assets/img/united.svg" alt="English" class="flag">  
             </div>
         </div>
       </nav>  
@@ -64,7 +71,7 @@
                 <div class="home__content grid">
                     <div class="home__data grid">
                         <h1 class="home__name"> Florencia Alvarez Vuille</h1>
-                        <h2 class="home__profession"> System's Analyst & Front-end Developer</h2>
+                        <h2 class="home__profession" data-translate="software"> Software Engineer | Innovation in technology</h2>
                         <div class="home__social">
                           <a href="https://github.com/floralvarez24" target="_blank"class="home__social-link">
                             <i class="ri-github-fill"></i>
@@ -74,12 +81,12 @@
                           </a> 
                         </div>
                     </div>
-                    <a href="assets/pdf/AlvarezFlorencia-CVEnglish.pdf" download="" class="home__button button"> Download CV</a>
+                    <a  id="download-cv" href="assets/pdf/CV Alvarez Florencia-En.pdf" download class="home__button button" data-translate="download"> Download CV</a>
                 </div>
             </div>
         </section>
         <section class="services section">
-           <h2 class="section__title">
+           <h2 class="section__title" data-translate="services">
             The services <br>
             I offer
            </h2> 
@@ -87,25 +94,19 @@
             <article class="services__card">
                 <i class="ri-code-s-slash-line"></i>
                 <h2 class="services__title"> Web Developer</h2>
-                <p class="services__description">
-                    Beautiful and elegant designs for your website,<br>
+                <p data-translate="servicesDescription" class="services__description">
+                    Attractive and elegant designs for your website,<br>
                     using modern technologies and frameworks.
                     Interfaces are intuitive and easy to use.
                 </p>
-                <button class="services__button button"> Know More</button>
+                <button class="services__button button" data-translate="know"> Know More</button>
                 <div class="services__modal">
                     <div class="services__modal-content">
                         <i class="ri-close-line services__modal-close"></i> 
                         <h2 class="services__modal-title"> Web Developer</h2>
                         <ul class="services__modal-list grid">
-                            <li class="services__modal-item">
-                                Create professional and quality websites at the client´s request.
-                            </li>
-                            <li class="services__modal-item">
-                                I position your website with SEO techniques.
-                            </li>
-                            <li class="services__modal-item">
-                                I solve performance problems.
+                            <li class="services__modal-item" data-translate="service1">
+                                I create professional, high-quality websites tailored to meet clients' needs. I enhance your online presence with effective SEO strategies and resolve performance issues to ensure optimal functionality and user experience
                             </li>
                         </ul>
                     </div>
@@ -114,18 +115,19 @@
            </div>
         </section>
         <section class="work section">
-           <h2 class="section__title">
-            My portfolio <br>
-            Projects
-           </h2>
+            <h2 class="section__title">
+                <span class="line1" data-translate="portfolioLine1">My portfolio</span>
+                <br>
+                <span class="line2" data-translate="portfolioLine2">Projects</span>
+            </h2>            
            <div class="work__container container grid">
             <article class="work__card">
                 <a href="https://github.com/floralvarez24/michelalvarezmusica" class="work__link" target="_blank">
                     <img src="assets/img/work1.png" alt="image" class="work__img">
                     <i class="ri-arrow-right-circle-line work__icon" ></i>
                 </a>
-                <h2 class="work__title">Presentation Website</h2>
-                <span class="work__subtitle">Responsive website for a musician.</span>
+                <h2 class="work__title" data-translate="presentationWebsite">Presentation Website</h2>
+                <span class="work__subtitle" data-translate="descriptionWebsite1">Responsive website for a musician.</span>
             </article>
             <article class="work__card">
                 <a href="https://github.com/floralvarez24/PFAlvarez" class="work__link" target="_blank">
@@ -133,7 +135,7 @@
                     <i class="ri-arrow-right-circle-line work__icon"></i>
                 </a>
                 <h2 class="work__title">Ecommerce Js</h2>
-                <span class="work__subtitle">Basic ecommerce, only includes the shopping cart.</span>
+                <span class="work__subtitle" data-translate="descriptionWebsite2">Basic ecommerce, only includes the shopping cart.</span>
             </article>
             <article class="work__card">
                 <a href="https://github.com/floralvarez24/PF-AlvarezF" class="work__link" target="_blank">
@@ -141,17 +143,17 @@
                     <i class="ri-arrow-right-circle-line work__icon"></i>
                 </a>
                 <h2 class="work__title">Ecommerce React.js</h2>
-                <span class="work__subtitle">Ecommerce using firebase to generate client's orders.</span>
+                <span class="work__subtitle" data-translate="descriptionWebsite3">Ecommerce using firebase to generate client's orders.</span>
             </article>
 
            </div>
         </section>
         <section class="contact section">
             <div class="contact__container container grid">
-                <h2 class="section__title">
+                <h2 class="section__title" data-translate="workTogether">
                     Let's work together<br>
                 </h2>
-                <a href="contact.html" class="contact__button button">Contact Me</a>
+                <a href="contact.html" class="contact__button button" data-translate="contact">Contact Me</a>
             </div>
         </section>
 
@@ -162,13 +164,13 @@
                 <a href="index.html" class="footer__logo">Florencia Alvarez</a>
                 <ul class="footer__links">
                     <li>
-                        <a href="about.html" class="footer__link"> About me</a>
+                        <a href="about.html" class="footer__link" data-translate="about"> About me</a>
                     </li>
                     <li>
-                        <a href="work.html" class="footer__link"> Portfolio</a>
+                        <a href="work.html" class="footer__link" data-translate="portfolio"> Portfolio</a>
                     </li>
                     <li>
-                        <a href="contact.html" class="footer__link"> Contact Me</a>
+                        <a href="contact.html" class="footer__link" data-translate="contact"> Contact Me</a>
                     </li>
                 </ul>
                 <div class="footer__social">
@@ -180,7 +182,7 @@
                     </a>
                 </div>
             </div>
-            <span class="footer__copy">
+            <span class="footer__copy" data-translate="allRights">
                 &#169;All Rights Reserved
             </span>
         </div>
