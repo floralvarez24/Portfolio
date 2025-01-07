@@ -91,6 +91,7 @@ const translations = {
     message: "Message",
     messagePlaceholder: "Write your message",
     send: "Send Message",
+    personalInformation: "My Personal Information",
 
   },
   es: {
@@ -121,6 +122,7 @@ const translations = {
     message: "Mensaje",
     messagePlaceholder: "Escribe tu mensaje",
     send: "Enviar Mensaje",
+    personalInformation: "Mi Información Personal",
 
   },
 };
